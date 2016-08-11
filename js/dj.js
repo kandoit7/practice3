@@ -70,9 +70,6 @@ window.addEventListener('load', function() {
 
   window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 
-  // Start initializing MIDI
-  if (navigator.requestMIDIAccess)
-    navigator.requestMIDIAccess().then( onMIDIInit, onMIDIFail );
 });
 
 var rafID = null;
