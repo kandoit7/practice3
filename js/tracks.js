@@ -99,7 +99,7 @@ function Track( url, left ) {
 	var pbrSlider = document.createElement("input");
 	pbrSlider.id = "scratch";
 	pbrSlider.className = "slider";
-	pbrSlider.onChange = this.parentNode.track.changePlaybackRate(pbrSlider.value);
+	pbrSlider.onChange = this.changePlaybackRate(pbrSlider.value);
 	pbrSlider.type = "range";
 	pbrSlider.min = "-2";
 	pbrSlider.max = "2";
