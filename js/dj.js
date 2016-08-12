@@ -131,9 +131,15 @@ controller.loop(function(frame) {
 		///
 			
 		if( zv_pos > 300 ) {
+			leftTrack.pbrSlider.value = parseFloat(scratch.value) - 0.05;
+			leftTrack.changePlaybackRate(leftTrack.pbrSlider.value);
+			console.log(scratch.value);
 		}
 		
 		if ( zv_pos < -300 ) {
+			leftTrack.pbrSlider.value = parseFloat(scratch.value) + 0.05;
+			leftTrack.changePlaybackRate(leftTrack.pbrSlider.value);
+			console.log(scratch.value);
 		}
 		
 		//
@@ -149,14 +155,8 @@ controller.loop(function(frame) {
 		// DJ Scratch
 		//
 		if( hand.yaw() < -0.5 ) {
-			leftTrack.pbrSlider.value = parseFloat(scratch.value) + 0.05;
-			leftTrack.changePlaybackRate(leftTrack.pbrSlider.value);
-			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.5 ) {
-			leftTrack.pbrSlider.value = parseFloat(scratch.value) - 0.05;
-			leftTrack.changePlaybackRate(leftTrack.pbrSlider.value);
-			console.log(scratch.value);
 		}	
 		
 	}
