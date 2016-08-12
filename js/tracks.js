@@ -699,7 +699,7 @@ controller.loop(function(frame) {
 		//
 		if( hand.yaw() < -0.7 ) {
 			scratch.value = parseFloat(scratch.value) + 0.05;
-			this.pbrText.innerHTML = parseFloat(scratch.value).toFixed(2);
+			track.pbrText.innerHTML = parseFloat(scratch.value).toFixed(2);
 			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
