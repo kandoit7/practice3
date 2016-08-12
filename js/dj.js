@@ -148,13 +148,13 @@ controller.loop(function(frame) {
 		//
 		// DJ Scratch
 		//
-		if( hand.yaw() < -0.7 ) {
-			leftTrack.pbrSlider.value = parseFloat(scratch.value) + 0.01;
+		if( hand.yaw() < -0.5 ) {
+			leftTrack.pbrSlider.value = parseFloat(scratch.value) + 0.05;
+			leftTrack.changePlaybackRate(leftTrack.pbrSlider.value);
 			console.log(scratch.value);
 		}	
-		if( hand.yaw() > 0.7 ) {
-			scratch.value = parseFloat(scratch.value) - 0.05;
-			console.log(scratch.value);
+		if( hand.yaw() > 0.5 ) {
+			leftTrack.pbrSlider.value = parseFloat(scratch.value) - 0.05;
 		}	
 		
 	}
