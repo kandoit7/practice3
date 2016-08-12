@@ -17,7 +17,7 @@ window.onkeypress = function(e) {
 };
 
 var controller = new Leap.Controller({enableGestures: true});
-var scratch = document.getElementById("rate").value;
+var scratch = parseFloat(document.getElementById('rate').value);
 controller.loop(function(frame) {
 	latestFrame = frame;
 	if (paused) {
