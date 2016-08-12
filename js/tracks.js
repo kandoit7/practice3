@@ -97,7 +97,7 @@ function Track( url, left ) {
 	e.appendChild( document.createTextNode("rate") );
 
 	var pbrSlider = document.createElement("input");
-	pbrSlider.ID = "rate";
+	pbrSlider.id = "rate";
 	pbrSlider.className = "slider";
 	pbrSlider.type = "range";
 	pbrSlider.min = "-2";
