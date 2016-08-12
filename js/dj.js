@@ -149,8 +149,7 @@ controller.loop(function(frame) {
 		// DJ Scratch
 		//
 		if( hand.yaw() < -0.7 ) {
-			scratch.value = parseFloat(scratch.value) + 0.05;
-			leftTrack.pbrText = parseFloat(scratch.value);
+			leftTrack.pbrSlider.value = parseFloat(scratch.value) + 0.01;
 			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
