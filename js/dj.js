@@ -1,5 +1,6 @@
 var dingbuffer = null;
 var revdingbuffer = null;
+var init = 1.00;
 
 function playSound(buffer) {
   var source = audioCtx.createBufferSource(); // creates a sound source
@@ -99,7 +100,7 @@ window.onkeypress = function(e) {
 		}
 	}
 	if (e.keyCode == '88') {
-		leftTrack.changePlaybackRate(1.00);
+		leftTrack.changePlaybackRate(init);
 	}
 };
 
