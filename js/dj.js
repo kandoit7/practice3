@@ -98,8 +98,8 @@ window.onkeypress = function(e) {
 			paused = false;
 		}
 	}
-	if (e.keyCode == 88) {
-		leftTrack.changePlaybackRate(1);
+	if (e.keyCode == '88') {
+		leftTrack.changePlaybackRate(1.00);
 	}
 };
 
