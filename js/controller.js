@@ -31,7 +31,7 @@ controller.loop(function(frame) {
 		var yv_pos = hand.palmVelocity[1];
 		var zv_pos = hand.palmVelocity[2];
 		
-		str += "<p color="white">" +
+		str += "<p>" +
 			"<strong>Roll:</strong> " + hand.roll() +
 			"<br/><strong>Pitch:</strong> " + hand.pitch() +
 			"<br/><strong>Yaw:</strong> " + hand.yaw() +
