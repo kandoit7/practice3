@@ -18,7 +18,7 @@ window.onkeypress = function(e) {
 
 var controller = new Leap.Controller({enableGestures: true});
 
-var scratch = document.getElementById('scratch');
+
 controller.loop(function(frame) {
 	latestFrame = frame;
 	if (paused) {
@@ -27,6 +27,7 @@ controller.loop(function(frame) {
 	}
 
 	var str = "";
+	var scratch = document.getElementById('scratch');
 	for (var i in frame.handsMap) {
 		var hand = frame.handsMap[i];
 		var position = hand.palmNormal[1] * 10;
