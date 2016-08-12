@@ -66,11 +66,11 @@ controller.loop(function(frame) {
 		// DJ Scratch
 		//
 		if( hand.yaw() < -0.7 ) {
-			Num(scratch.value) -= 0.05;
+			scratch.value = parseFloat(scratch.value) + 0.05;
 			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
-			Num(scratch.value) += 0.05;
+			Num(scratch.value) = parseFloat(scratch.value) - 0.05;
 			console.log(scratch.value);
 		}	
 		
