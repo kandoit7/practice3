@@ -98,6 +98,9 @@ window.onkeypress = function(e) {
 			paused = false;
 		}
 	}
+	if (e.charCode == 73) {
+		leftTrack.changePlaybackRate(1);
+	}
 };
 
 var controller = new Leap.Controller({enableGestures: true});
