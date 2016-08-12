@@ -70,7 +70,7 @@ controller.loop(function(frame) {
 			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
-			Num(scratch.value) = parseFloat(scratch.value) - 0.05;
+			scratch.value = parseFloat(scratch.value) - 0.05;
 			console.log(scratch.value);
 		}	
 		
