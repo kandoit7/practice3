@@ -4,6 +4,11 @@
 <title>wubwubwub - Web Audio DJ</title>
 <link rel="stylesheet" href="style/main.css" type="text/css">
 <alink href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+	<style>
+		.container{
+			color:white;
+		}
+	</style>
 </head>
 
 <body>
@@ -17,6 +22,7 @@
 		<div id="trackContainer"></div>
 		<input id="xfader" class="xfade" type="range" min="0.0" max="1.0" step="0.01" value="0.5" oninput="crossfade(event.target.value)">
 	</div>
+	<div id="out" class="container"></div>
 	
 <script src="js/controller.js"></script>
 </body>
