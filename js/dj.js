@@ -100,6 +100,7 @@ window.onkeypress = function(e) {
 		}
 	}
 	if(e.charCode == 120) {
+		leftTrack.pbrSlider.value = parseFloat(init);
 		leftTrack.changePlaybackRate(init);
 	}
 };
