@@ -45,25 +45,9 @@ controller.loop(function(frame) {
 		///
 			
 		if( zv_pos > 300 ) {
-			if ( leftSong != null) {
-				if( leftSong.playbackRate > 1.9 ) {
-					leftSong.playbackRate = 2;
-				} 
-				else {
-					leftSong.playbackRate = leftSong.playbackRate + 0.1;
-				}
-			}
 		}
 		
 		if ( zv_pos < -300 ) {
-			if ( leftSong != null ) {
-				if ( leftSong.playbackRate < 0.6 ) {
-					leftSong.playbackRate = 0.5;
-				}
-				else {
-					leftSong.playbackRate = leftSong.playbackRate - 0.1;
-				}
-			}
 		}
 		
 		//
@@ -71,39 +55,15 @@ controller.loop(function(frame) {
 		//
 		
 		if( yv_pos > 300 ){
-			if (leftSong != null) {
-				if(leftSong.volume > 0.9){
-					leftSong.volume = 1;
-				}
-				else{				
-				leftSong.volume = leftSong.volume + 0.1;
-				}
-			}
 		}
 		if( yv_pos < -300 ){
-			if (leftSong != null) {    
-				if(leftSong.volume < 0.1){
-					leftSong.volume = 0;
-				}
-				else{				
-				leftSong.volume = leftSong.volume - 0.1;
-				}
-			}
 		}
 		
 		//
 		// DJ Scratch
 		//
 		if( hand.yaw() < -0.7 ) {
-			if (leftSong != null) {    
-				leftSong.currentTime-=timeFactor;
-				$('#left .jog').addClass('reverse');
-				
-			}
-		}
-		else {
-				$('#left .jog').removeClass('reverse');
-				$('#left .jog').addClass('running');
+
 		}	
 		
 	}
