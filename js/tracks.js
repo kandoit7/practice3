@@ -99,9 +99,6 @@ function Track( url, left ) {
 	var pbrSlider = document.createElement("input");
 	pbrSlider.id = "scratch";
 	pbrSlider.className = "slider";
-	pbrSlider.onchange =  function(event) {
-		this.parentNode.track.changePlaybackRate(event.target.value);
-	};
 	pbrSlider.type = "range";
 	pbrSlider.min = "-2";
 	pbrSlider.max = "2";
@@ -702,12 +699,12 @@ controller.loop(function(frame) {
 		//
 		if( hand.yaw() < -0.7 ) {
 			scratch.value = parseFloat(scratch.value) + 0.05;
-			Track.pbrText.innerHTML = parseFloat(scratch.value).toFixed(2);
+			this.pbrText.innerHTML = parseFloat(scratch.value).toFixed(2);
 			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
 			scratch.value = parseFloat(scratch.value) - 0.05;
-			Track.pbrText.innerHTML = parseFloat(scratch.value).toFixed(2);
+			this.pbrText.innerHTML = parseFloat(scratch.value).toFixed(2);
 			console.log(scratch.value);
 		}	
 		
