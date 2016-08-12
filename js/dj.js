@@ -53,7 +53,6 @@ window.addEventListener('load', function() {
   runningDisplayContext = document.getElementById("wavedisplay").getContext("2d");
 
   leftTrack = new Track( "sounds/Untitled2.mp3", true );
-  rightTrack = new Track( "sounds/TheseWalls.mp3", false );
 
   var request = new XMLHttpRequest();
   request.open("GET", "sounds/ding.ogg", true);
