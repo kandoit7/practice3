@@ -17,7 +17,7 @@ window.onkeypress = function(e) {
 };
 
 var controller = new Leap.Controller({enableGestures: true});
-var scratch = document.getElementById('rate');
+var scratch = document.getElementById("rate").value;
 controller.loop(function(frame) {
 	latestFrame = frame;
 	if (paused) {
@@ -64,10 +64,10 @@ controller.loop(function(frame) {
 		// DJ Scratch
 		//
 		if( hand.yaw() < -0.7 ) {
-			scratch.value -= 0.1;
+			scratch -= 0.1;
 		}	
 		if( hand.yaw() > 0.7 ) {
-			scratch.value += 0.1;
+			scratch += 0.1;
 		}	
 		
 	}
