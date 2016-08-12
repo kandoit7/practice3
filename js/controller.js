@@ -65,10 +65,9 @@ controller.loop(function(frame) {
 		// DJ Scratch
 		//
 		if( hand.yaw() < -0.7 ) {
-			scratch -= 0.1;
+			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
-			scratch += 0.1;
 		}	
 		
 	}
