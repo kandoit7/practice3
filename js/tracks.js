@@ -110,7 +110,6 @@ function Track( url, left ) {
 	e.appendChild( pbrSlider );
 
 	var pbrText = document.createElement( "span" );
-	pbrText.id = "scratch";
 	pbrText.appendChild( document.createTextNode("1.00"));
 	e.appendChild( pbrText );
 	this.pbrText = pbrText;
