@@ -99,9 +99,6 @@ window.onkeypress = function(e) {
 			paused = false;
 		}
 	}
-	if (e.keyCode == '88') {
-		leftTrack.changePlaybackRate(init);
-	}
 };
 
 var controller = new Leap.Controller({enableGestures: true});
@@ -165,4 +162,12 @@ controller.loop(function(frame) {
 		
 	}
 	document.getElementById('out').innerHTML = str;
+});
+
+$(function() {
+	$(document).keydown(function(event) {
+		if(event.keyCode == '49') {
+			leftTrack.changePlaybackRate(init);
+		}
+	});
 });
