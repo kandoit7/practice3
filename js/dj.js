@@ -98,7 +98,7 @@ window.onkeypress = function(e) {
 			paused = false;
 		}
 	}
-	if (e.charCode == 119) {
+	if (e.keyCode == 88) {
 		leftTrack.changePlaybackRate(1);
 	}
 };
