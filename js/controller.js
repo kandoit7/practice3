@@ -67,9 +67,11 @@ controller.loop(function(frame) {
 		//
 		if( hand.yaw() < -0.7 ) {
 			scratch.value -= 0.05;
+			console.log(scratch.value);
 		}	
 		if( hand.yaw() > 0.7 ) {
 			scratch.value += 0.05;
+			console.log(scratch.value);
 		}	
 		
 	}
